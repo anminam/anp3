@@ -1,13 +1,16 @@
 const crawsite = require('./lib/crawsite');
 
 
-const init = () => {
+const init = async () => {
 
-    const gList = crawsite.genie.init();
-    const mList = crawsite.melon.init();
+    const mList = await crawsite.melon.init();
+    const gList = await crawsite.genie.init();
     
-    gList;
+    calc([mList, gList]);
+}
 
+const calc = ([mList, gList]) => {
+    const arr = [];
 
 }
 
