@@ -1,8 +1,8 @@
 const getHtml = require('./getHtml');
-const findObj = (list, title, value) => {
+const findObj = (list, key, value) => {
     let obj = null;
     list.some(item => {
-        if( item[title] == value) {
+        if( item[key] == value) {
             obj = item;
             return true;
         }
