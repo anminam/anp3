@@ -1,3 +1,4 @@
+const fs = require('fs');
 const getHtml = require('./getHtml');
 
 const findObj = (list, key, value) => {
@@ -20,7 +21,7 @@ const getShortSong = (name) => {
 
 const fileExport = (config) => {
     const fs = require('fs');
-
+    
     let json = JSON.stringify(config.data);
     fs.writeFileSync(config.name, json);
 }
