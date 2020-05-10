@@ -36540,6 +36540,8 @@ const init = (config) => {
         }).then(json => {
             console.table(json);
             return json;
+        }).catch(err => {
+            console.log(err);
         });
 }
 
@@ -48351,6 +48353,8 @@ const init = () => {
         }).then(json => {
             console.table(json);
             return json;
+        }).catch(err => {
+            console.log(err);
         });
 }
 
@@ -48400,6 +48404,8 @@ const init = (config) => {
         }).then(json => {
             console.table(json);
             return json;
+        }).catch(err => {
+            console.log(err);
         });
 }
 
@@ -48482,6 +48488,9 @@ const exportList = (apps) => {
 
 const addSong = (arr, list) => {
 
+    if (!list) {
+        return arr;
+    }
     list.forEach(item => {
         const song = item.shortSong;
         if (!findObj(arr, 'shortSong', song)) {

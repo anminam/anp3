@@ -8,7 +8,16 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "프로그램 시작",
+            "name": "바로시작",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\examples\\startlib.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "dist 시작",
             "skipFiles": [
                 "<node_internals>/**"
             ],

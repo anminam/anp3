@@ -1,5 +1,17 @@
 const anp3 = require('../dist/anp3');
-const test = require('../dist/test');
-console.log(anp3, test);
-crawsite.start();
 
+const start = async () => {
+    try {
+
+        const a = anp3.start();
+        a().then((value) =>{
+            value
+
+        })
+    } catch(e) {
+        console.log(e)
+    }
+    
+}
+
+start();
