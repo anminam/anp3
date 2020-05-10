@@ -2,16 +2,13 @@ const anp3 = require('../dist/anp3');
 
 const start = async () => {
     try {
-
-        const a = anp3.start();
-        a().then((value) =>{
-            value
-
-        })
+        const result = await anp3.start();
+        const {list} = result;
+        return result;
     } catch(e) {
-        console.log(e)
+        console.log(e);
+        return null;
     }
-    
 }
 
 start();
