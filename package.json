@@ -20,7 +20,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "examples": "node ./examples/index.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "buildtest": "webpack --config webpack.config.js"
   },
   "author": {
     "name": "anminam",

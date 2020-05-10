@@ -8,9 +8,6 @@ module.exports = [
         entry: {
             anp3: path.resolve(__dirname, 'lib/crawsite/index.js')
         },
-        plugins: [
-            new CleanWebpackPlugin()
-        ],
         optimization: {
             minimize: false
         }
@@ -19,5 +16,16 @@ module.exports = [
         entry: {
             "anp3.min": path.resolve(__dirname, 'lib/crawsite/index.js')
         }
+    }),
+    merge(common, {
+        entry: {
+            test: path.resolve(__dirname, 'lib/test/index')
+        },
+        optimization: {
+            minimize: false
+        },
+        plugins: [
+            new CleanWebpackPlugin()
+        ],
     }),
 ]
