@@ -1,12 +1,14 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+require("babel-polyfill");
+
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = [
     merge(common, {
         entry: {
-            anp3: path.resolve(__dirname, 'lib/crawsite/index.js')
+            anp3: ['@babel-polyfill', path.resolve(__dirname, 'lib/crawsite/index.js')]
         },
         optimization: {
             minimize: false
