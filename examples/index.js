@@ -4,12 +4,13 @@ const start = async () => {
     try {
 
         const a = anp3.start();
-        a().then((value) =>{
+        a().then((value) => {
             value
 
         })
     } catch(e) {
-        console.log(e)
+        console.trace(e);
+        console.log(e);
     }
     
 }

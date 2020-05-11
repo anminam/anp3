@@ -1,10 +1,19 @@
 const axios = require('axios');
 
-const getHtml = async (url) => {
+const getHtml = async ( url ) => {
     try {
-        return await axios.get(url);
+        const result = await axios.get( url, {
+            timeout: 1000
+        });
+        return {
+            result
+        }
     } catch(err) {
-        throw `${err}, 가져오지 못했습니다.`
+        console.trace(err);
+        return {
+            result: null,
+            error: err
+        }
     }
 }
 
