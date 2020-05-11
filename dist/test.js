@@ -99,8 +99,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports) {
 
 module.exports = {
-    sum: (a, b) => a + b
-}
+  sum: function sum(a, b) {
+    return a + b;
+  }
+};
 
 /***/ })
 /******/ ]);
