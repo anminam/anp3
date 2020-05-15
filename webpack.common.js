@@ -4,14 +4,14 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
-        library: "amp3",
-        libraryTarget: 'umd',
-        globalObject: 'this'
+        // globalObject: 'this'
+        // library: "amp3",
+        // libraryTarget: 'umd',
     },
     performance: {
         hints: false
     },
     node: {
         fs: 'empty'
-    },
+    }
 }
