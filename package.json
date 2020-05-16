@@ -11,6 +11,7 @@
     "axios": "^0.19.2",
     "babel-polyfill": "^6.26.0",
     "cheerio": "^1.0.0-rc.3",
+    "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "node-fetch": "^2.6.0"
   },
@@ -33,7 +34,7 @@
     "examples": "node ./examples/index.js",
     "build": "webpack --config webpack.prod.js",
     "buildtest": "webpack --config webpack.config.js",
-    "dev-test": "webpack-dev-server --open"
+    "dev-test": "webpack-dev-server --config webpack.config.js --open"
   },
   "author": {
     "name": "anminam",
