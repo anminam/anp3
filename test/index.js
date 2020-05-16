@@ -1,13 +1,12 @@
-const axios = require('axios');
+import {start} from '../lib/crawsite';
 
 
-const start = async () => {
-    try{
-    const result = await axios.get('https://ui-avatars.com/api/?name=John+Doe');
-    return result.data;
-    }catch(e) {
+const init = async () => {
+    try {
+        return await start();
+    } catch(e) {
         console.log(e);
     }
 }
 
-start();
+init();
