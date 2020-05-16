@@ -3,7 +3,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    mode: 'production',
+    mode: 'none',
     entry: {
         test: path.resolve(__dirname, 'test')
     },
@@ -19,5 +19,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'test/index.html',
         })
-    ]
+    ],
+    node: {
+        fs: 'empty'
+    }
 }
