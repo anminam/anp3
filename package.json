@@ -13,7 +13,7 @@
     "cheerio": "^1.0.0-rc.3",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
